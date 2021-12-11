@@ -1,5 +1,9 @@
-import React from 'react'
-import TodoItem from './TodoItem'
+import React from "react";
+import GetData from "./src/GetData";
+
+
+function CarsList(){
+
 const styles = {
   ul: {
     listStyle: 'none',
@@ -20,3 +24,6 @@ function TodoList(props) {
 
 GetData();
 export default TodoList
+}
+
+export default CarsList
