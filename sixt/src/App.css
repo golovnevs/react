@@ -21,11 +21,14 @@ body {
   transition: 0.3s;
 }
 
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
 .carImage {  
   width: 100%;
   position: relative;
   background-image: 'bg_image.png';
-
 }
 
 .carImage:hover {
@@ -43,6 +46,7 @@ body {
   width: 100%;
   ma-height: 80px;
   bottom: 0;
+  padding-left: 10px;
   background: #FF5F00;
   padding-top: 10px;
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
@@ -50,43 +54,41 @@ body {
 }
 
 .description span {
+  margin-left:10px;
+  margin-right: 10px;
   align-content: left;
   font-size: 16pt;
   color:#FF5F00;
   background: #000;
   font-weight: bold;
-  margin-left: 20px;
 }
 
 .description p {
   font-size: 14pt;
   color: #fff;
   font-weight: bold;
-  margin-left: 20px;
+  margin-left:10px;
+  margin-right: 10px;
   padding-bottom: 10px;
 }
 
-.card:hover {
-  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
-}
-
-@media screen and (max-width: 1450px) {
+@media screen and (max-width: 1350px) {
   .container {
     grid-template-columns: 1fr 1fr 1fr;
-    }
+  }
   .description {
     height:90px;
   }
 }
 
-@media screen and (max-width: 1060px) {
+@media screen and (max-width: 900px) {
   .container {
     grid-template-columns: 1fr 1fr;
-    }
+  }
 }
 
 @media screen and (max-width: 710px) {
   .container {
     grid-template-columns: 1fr;
-    }
+  }
 }

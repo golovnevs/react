@@ -9,7 +9,7 @@ function App() {
       <PageHeader />
       <div className="container">
         <OffersList />
-       </div>
+      </div>
     </div>
   )
 }
