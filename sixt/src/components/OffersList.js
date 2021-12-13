@@ -16,9 +16,10 @@ function OfferList() {
 
   return (
     data ? ( 
-       data.offers.map((offer) => {       
+       data.offers.map((offer, index) => {       
         return (
           <CardRender 
+            key ={index}
             name = {offer.carGroupInfo.modelExample.name} 
             imgSrc={offer.carGroupInfo.modelExample.imageUrl}  
             price={offer.prices.basePrice.amount.value} 
@@ -28,6 +29,6 @@ function OfferList() {
       })
     ) : 'Loading...'
   )
-    }
+}
   
 export default OfferList;
