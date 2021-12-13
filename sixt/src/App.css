@@ -1,18 +1,20 @@
-.App {
-  text-align: center;
+body {
+  background-color: #efefef;
 }
 
-
 .container {
+  max-width: 100%;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr; 
+  background-color: #efefef;
 }
 
  .card {
-   position: relative;
+  position: relative;
+  overflow: hidden;
+  background-color: #fff;
   aspect-ratio: 1;
-  font-size: 18pt;
-  
+  font-size: 16pt;
   color:black;
   margin: 20px;
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
@@ -20,65 +22,71 @@
 }
 
 .carImage {  
-  max-height: 80%;
-  margin: auto; 
+  width: 100%;
+  position: relative;
+  background-image: 'bg_image.png';
+
 }
 
 .carImage:hover {
  transform: scale(1.1);
 }
 
-
-.defImg {
-  max-width: 80%;
+.mainHeader {
+  background-color: #191919;
+  color: #fff;
+  padding: 20px; 
 }
 
 .description {
   position: absolute;
   width: 100%;
+  ma-height: 80px;
   bottom: 0;
   background: #FF5F00;
-  padding-top: 20px;
+  padding-top: 10px;
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
   transition: 0.3s;
-
 }
 
 .description span {
+  align-content: left;
+  font-size: 16pt;
   color:#FF5F00;
   background: #000;
   font-weight: bold;
   margin-left: 20px;
-  margin-top: 20px;
 }
 
-.description h4 {
+.description p {
+  font-size: 14pt;
   color: #fff;
   font-weight: bold;
   margin-left: 20px;
+  padding-bottom: 10px;
 }
 
 .card:hover {
   box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
-
-
 }
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1450px) {
   .container {
     grid-template-columns: 1fr 1fr 1fr;
     }
+  .description {
+    height:90px;
+  }
 }
 
-@media screen and (max-width: 922px) {
+@media screen and (max-width: 1060px) {
   .container {
     grid-template-columns: 1fr 1fr;
     }
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 710px) {
   .container {
     grid-template-columns: 1fr;
     }
-
 }
