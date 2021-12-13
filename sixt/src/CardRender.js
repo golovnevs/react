@@ -1,27 +1,17 @@
+import React from 'react';
 import './App.css';
-import GetData from './GetData';
-import { useState } from 'react';
-import { useEffect } from 'react';
 
-function CardRender() {
-  // const [namea, linka] = useState([]);
-  let res = [];
-  GetData().then(res => {
-    console.log(res[0].name);
-});
+function CardRender(props) {
   return (
-<div class="container">
-    <div class="card">
-    <img class="defImg" src="bg_img.png" />
-        <div class="description">
-          <span>dfds</span>
-          <p>sdsdf</p>
+    <div className="card">
+      <img src={props.imgSrc} alt=" " />
+        <div className="description">
+          <span>{props.name}</span> 
+          <h4>{props.price} {props.currency}</h4>
         </div>
     </div>
-</div>
   )
-   }
-    export default CardRender; 
-      
 
+}
 
+export default CardRender; 

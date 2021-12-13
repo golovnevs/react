@@ -9,11 +9,12 @@
 }
 
  .card {
+   position: relative;
   aspect-ratio: 1;
   font-size: 18pt;
   
   color:black;
-  margin: 20px 20px 20px 20px;
+  margin: 20px;
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
   transition: 0.3s;
 }
@@ -23,40 +24,44 @@
   margin: auto; 
 }
 
-.carImage data {
-
-
+.carImage:hover {
+ transform: scale(1.1);
 }
+
 
 .defImg {
   max-width: 80%;
 }
 
 .description {
- background: #FF5F00;
- margin: auto;
- padding: 20px;
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  background: #FF5F00;
+  padding-top: 20px;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+
 }
 
 .description span {
-  
   color:#FF5F00;
   background: #000;
   font-weight: bold;
+  margin-left: 20px;
+  margin-top: 20px;
 }
 
-.description p {
+.description h4 {
   color: #fff;
-  font-weight: semi-bold;
-  font-size: 18pt;
+  font-weight: bold;
+  margin-left: 20px;
 }
 
 .card:hover {
   box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
-}
 
-.carImage:hover {
-  max-height: 90%;
+
 }
 
 @media screen and (max-width: 1200px) {
